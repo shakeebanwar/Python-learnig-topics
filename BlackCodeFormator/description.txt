@@ -1,0 +1,17 @@
+Q.What is Black?
+
+Black is a Python code formatter that automatically formats your Python code according to the Black code style. It is designed to take the burden of code formatting decisions off developers' shoulders, ensuring consistent and readable code across projects.
+
+Black is known for its "uncompromising" approach to code formatting, meaning it makes minimal exceptions to its style rules, and it does not provide a lot of configurable options. Instead, it focuses on producing consistently formatted code without any stylistic debates.
+
+Installation:
+pip install black
+
+Format your Python code using Black:
+
+black format.py
+
+If you want to format an entire directory and its subdirectories containing Python files, you can use:
+
+black your_directory/
+
