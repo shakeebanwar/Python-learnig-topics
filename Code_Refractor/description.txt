@@ -1,0 +1,48 @@
+Code Writing Principle:
+
+1.Do one thing , and do it well.
+2.Separate commands from queries.
+3.Only request information you actually need.
+4.Keep the number of parameters minimal.
+5.Dont create and use an object in the same place.
+6.Dont use flag parameters.
+7.Remember that functions are object.
+8.Bonus tips for naming functions.
+
+
+
+
+Q How i validate function only recieve keyword arguments?
+
+def validate_function(*,number = cardnumber:str)>str:
+    return number
+
+
+* force the function to recieve keyword arguments.
+
+Q.What is StrEnum?
+
+
+
+Q.What is Protocol in a typing module?
+
+
+Q.What is Callable in a typing module?
+
+
+
+Q.What is "functools import partial"?
+
+Q.What is snake case ?
+
+
+
+
+
+Important things...
+
+1.Function name should be actions that should be verb.
+2.Arguments should be noun.
+
+
+

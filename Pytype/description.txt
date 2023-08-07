@@ -1,0 +1,21 @@
+Q.what is pytype?
+
+Pytype is a static type analysis tool for Python. It is developed by Google and is used to analyze and infer types in Python code without executing it. The primary purpose of pytype is to help identify type-related errors and provide static type checking, similar to other static type checkers like mypy.
+
+Pytype uses type annotations introduced in Python 3 (PEP 484) to understand the types of variables, arguments, and return values in your code. It analyzes these annotations and attempts to infer types for unannotated code.
+
+
+For Practical:
+pip install pytype
+
+Run pytype on your Python script:
+pytype pytype_practical.py
+
+
+Run pytype on all Python files in the folder using the wildcard (*):
+pytype *.py
+
+
+You can also include subdirectories by using the recursive wildcard **/*.py. This will check all Python files in the current directory and its subdirectories.
+
+pytype **/*.py

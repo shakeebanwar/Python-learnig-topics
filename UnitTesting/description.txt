@@ -1,0 +1,78 @@
+Test-Driven-Development:
+
+Step#1:
+Write Test:
+
+Step#2:
+Run the Test:
+
+Step#3:
+Write the Acutal Code
+
+Step#4:
+Make all Tests Pass
+
+Step#5:
+Refractor and improve.
+
+
+
+Q.What is Red Green Refractor of code?
+
+Red: In this step, you write a new test case for a specific piece of functionality that you want to implement. Since you haven't written the code yet, the test will fail (indicated by a red test failure).
+
+Green: The goal in this step is to implement the code that makes the failing test pass. The code you write should be minimal and straightforward, aiming only to satisfy the test case you just wrote. When the test passes, it will turn green, indicating success.
+
+Refactor: Once you have a passing test, you can refactor your code without changing its behavior. The refactoring process involves improving the design, readability, and performance of your code. Since you have test cases in place, you can refactor with confidence, knowing that any unintended changes in behavior will be caught by the tests.
+
+This Red-Green-Refactor cycle continues iteratively, with each iteration adding a new test, implementing the code to make it pass, and then refactoring the code if necessary. The process helps ensure that your code is continually improving, and any new changes don't introduce regressions in functionality.
+
+
+
+Q.Why we use @dataclass?
+
+In simple terms, @dataclass is a Python decorator that helps create classes primarily used to hold data, without needing to write boilerplate code for common class methods like __init__, __repr__, and others.
+
+Before @dataclass was introduced in Python 3.7, you would need to write repetitive code to define these common methods in classes meant for holding data. With @dataclass, Python automatically generates these methods for you based on the class attributes you define.
+
+UseCases:
+Data Transfer Objects (DTOs): 
+When you need to transfer data between different parts of your application, such as between functions or across network boundaries, using @dataclass can provide a clean and straightforward representation of the data
+
+Configuration Classes: 
+When you have configurations with multiple parameters, you can use @dataclass to create configuration classes with default values, making it easy to update and manage configurations.
+
+
+Q.Why we use @property?
+
+The @property decorator is used to create getter methods for class attributes. It allows you to define a method that retrieves the value of an attribute, but it presents it as if it were a regular class attribute. This makes it look like you are directly accessing the attribute, but behind the scenes, you can execute custom code to compute or manipulate the attribute value.
+
+UseCase:
+
+Data Validation: 
+You can add validation logic to ensure that attribute values meet certain conditions before being set. For example, you can prevent negative values or enforce specific data types for an attribute.
+
+Refactoring:
+Using @property allows you to refactor your code easily. If you decide to change how an attribute is computed or handled internally, you only need to modify the property method without changing how it's accessed from outside the class.
+
+
+Some Important Assert methods:
+
+1.assertAlmostEqual:
+
+assertAlmostEqual is used in Python for comparing floating-point numbers or decimals. It performs an approximate comparison, meaning it considers values to be equal if their difference is small enough to be considered a rounding error.
+
+2.assertIsInstance:
+
+assertIsInstance function is used to check the data type (class) of variables or objects. It is primarily used in assertions to verify that a variable or object has the correct data type.
+
+3.assertEqual:
+
+assertEqual compares two values and raises an error if they are not equal, indicating a test failure.
+
+4.assertRaises:
+
+Its purpose is to test a code snippet that is expected to raise a specific exception. If the code snippet raises the expected exception, assertRaises passes the test; otherwise, the test case fails.
+
+Important Tips:
+* Dont use global instances in a testcase?

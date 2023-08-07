@@ -1,0 +1,39 @@
+Q.What is Pylint?
+
+Pylint is a static code analysis tool for Python that checks your Python code against a set of coding standards and detects potential errors, style issues, and code smells. It helps improve code quality and maintainability by enforcing consistent coding conventions and identifying possible bugs or problematic patterns.
+
+Pylint examines your code by analyzing its Abstract Syntax Tree (AST) and generating a report with various messages and warnings. It assigns a score to your code based on its adherence to the specified coding standards. The higher the score, the better the code quality.
+
+
+Install Pylint using pip:
+pip install pylint
+
+
+Run Pylint on the Python script:
+pylint addition.py
+
+
+To get a better understanding of the score and which specific rules are being violated, you can create a .pylintrc configuration file in the same directory as your Python script or in the project root. In this file, you can customize the Pylint settings according to your requirements.
+
+Here's a sample .pylintrc file.
+[pylint]
+disable = C0114, C0103
+
+
+
+C0114: Missing module docstring (missing-module-docstring)
+C0103: Argument name "a" doesn't conform to snake_case naming style (invalid-name)
+
+
+Run Pylint on all Python files in the directory:
+ 
+ pylint file1.py file2.py file3.py
+
+                OR
+
+           pylint *.py
+
+ 
+If you have Python files in subdirectories as well and want to include them in the analysis, you can use the recursive wildcard **/*.py. This will check all Python files in the current directory and its subdirectories.
+
+pylint **/*.py
