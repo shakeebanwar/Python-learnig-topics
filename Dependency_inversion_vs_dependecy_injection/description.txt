@@ -1,0 +1,44 @@
+Dependency Injection:
+
+Dependency has to be injected and not created inside the class.
+
+Type of Dependecny Injection:
+
+1.Constructor Injection.
+2.Property Injection.
+3.Method Injection.
+
+* In sab ma sa Constructor Injection recomanded ha q ka bina Dependency ko pass kiya class ka object create nhi kar sakta.Property Injection ka case ma developer property pass karna bhol sakta ha jiski waja sa error ana ka zada chances ha.
+
+* Constructor Injection sa humna tight coupling ko avoid kiya ha.Testcase likhta wa ak clearity hongi ka is class ma kiya kiya Dependecny ha aur wo Dependecny hum as a Constructor inject kardaga.
+
+
+
+Important:
+Rules of Abstraction:
+1.Only provide relvant information.
+
+
+
+Dependency Inversion:
+
+work on solid principle.
+
+S: Single Responsibility
+O: Open Close
+L: LISKOV Substitution
+I:Interface Segregation.
+D:Dependency Inversion
+
+
+Defination:
+Dependency must always be passed using the highest level of Abstraction (protocol).
+
+Interview Question:
+
+Q.what is the difference between the Injection and Inversion?
+
+A.Dependecy inversion means Dependency Injection with the help of protocol.
+
+*In the case of Dependency Injection:
+    Dependency has to be injected and not created inside the class.
