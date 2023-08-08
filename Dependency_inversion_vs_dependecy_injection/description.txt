@@ -12,6 +12,8 @@ Type of Dependecny Injection:
 
 * Constructor Injection sa humna tight coupling ko avoid kiya ha.Testcase likhta wa ak clearity hongi ka is class ma kiya kiya Dependecny ha aur wo Dependecny hum as a Constructor inject kardaga.
 
+* Dependency Injection enhances code modularity, testability, flexibility, and maintainability by allowing components to be more decoupled and interchangeable.
+
 
 
 Important:
@@ -33,6 +35,8 @@ D:Dependency Inversion
 
 Defination:
 Dependency must always be passed using the highest level of Abstraction (protocol).
+
+Dependency Inversion Principle (DIP): Yeh ek SOLID principles ka hissa hai aur yeh yeh kehta hai ki high-level modules (jaise ki business logic) ko low-level modules (jaise ki database interactions) se directly connect nahi hona chahiye. Instead, dono levels ko abstraction ke through connect kiya jana chahiye
 
 Interview Question:
 
