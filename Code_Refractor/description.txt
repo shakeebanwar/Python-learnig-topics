@@ -20,20 +20,111 @@ def validate_function(*,number = cardnumber:str)>str:
 
 * force the function to recieve keyword arguments.
 
-Q.What is StrEnum?
+Q.What is Enum Class in a python?
+
+Explaination:
+
+Clarity and Readability: Using string-based enumerations makes your code more readable and self-explanatory. Instead of using plain strings scattered throughout your code, you can use enumerated values, which provide context and meaning.
+
+Type Safety: Enumerations provide type safety. You can't accidentally assign an invalid value because the values are constrained to a predefined set.
+
+Autocompletion and IDE Support: When you use enumerated values, your IDE can provide autocompletion suggestions, reducing the chances of typos and errors.
+
+Example:
+    from enum import Enum
+
+    class Gender(Enum):
+        MALE = 'male'
+        FEMALE = 'female'
+        OTHER = 'other'
+
+    def get_salutation(gender):
+        if gender == Gender.MALE:
+            return "Mr."
+        elif gender == Gender.FEMALE:
+            return "Ms."
+        else:
+            return "Mx."
+
+    user_gender = Gender.FEMALE
+    print(f"Hello, {get_salutation(user_gender)} Smith!")
+
 
 
 
 Q.What is Protocol in a typing module?
 
+Modularity: Protocol aapke code ko modular banata hai. Aap kisi specific behavior ko aik interface mein define kar sakte hain aur phir us interface ko kisi bhi class mein implement kar sakte hain.
+
+
+from typing import Protocol
+
+class Drawable(Protocol):
+    def draw(self) -> None:
+        ...
+
+class Circle:
+    def draw(self):
+        print("Drawing a circle")
+
+class Square:
+    def draw(self):
+        print("Drawing a square")
+
+def draw_shape(shape: Drawable):
+    shape.draw()
+
+circle = Circle()
+square = Square()
+
+draw_shape(circle)  # Output: "Drawing a circle"
+draw_shape(square)  # Output: "Drawing a square"
+
+
+
+
 
 Q.What is Callable in a typing module?
 
+In the typing module of Python, the Callable type hint is used to indicate that an object is callable, i.e., it can be called as a function. It allows you to specify the signature of the callable object, including the types of its arguments and its return type.
+
+The Callable type hint is used in scenarios where you want to specify the type of a function, method, or other callable objects, particularly when they have specific input and output types.
+
+Here's a basic example of how you might use the Callable type hint:
+
+from typing import Callable
+
+def add(x: int, y: int,z:int) -> int:
+    return x + y + z
+
+def subtract(x: int, y: int,z:int) -> int:
+    return x - y -z
+
+def perform_operation(operation: Callable[[int, int,int], int], x: int, y: int,z:int) -> int:
+    return operation(x, y,z)
+
+result_add = perform_operation(add, 5, 3,6)
+result_subtract = perform_operation(subtract, 10, 4,6)
+
+print("Addition result:", result_add)  # Output: 8
+print("Subtraction result:", result_subtract)  # Output: 6
 
 
-Q.What is "functools import partial"?
+
+
 
 Q.What is snake case ?
+
+In snake case:
+
+    All letters are lowercase.
+    Words are separated by underscores.
+
+For example:
+
+    my_variable_name
+    function_name
+    user_input
 
 
 
